@@ -46,6 +46,16 @@ public class MyString {
         return 0;
     }
 
+    public boolean equals(Object anotherObject) {
+        if (null == anotherObject) {
+            return false;
+        }
+        if (!(anotherObject instanceof MyString)) {
+            return false;
+        }
+        return this.compareTo((MyString) anotherObject) == 0;
+    }
+
     public MyString concat(MyString anotherString) {
         // time O(n + m) where n and m are the lengths of the two strings
         // size O(n + m) with return value where n and m are the lengths of the two strings O(1) if return value is not counted
