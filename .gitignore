@@ -5,6 +5,9 @@
 .gradle
 lib/build/
 
+### Intellij ###
+.idea
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
