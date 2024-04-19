@@ -24,22 +24,26 @@ public class MyMath {
     }
 
     public static long abs(long a) {
-        if (a < 0l) {
-            return a * -1l;
+        if (a < 0L) {
+            return a * -1L;
         }
         return a;
     }
 
+    // Calling a Math method would defeat the purpose of this endeavor
+    @SuppressWarnings("ManualMinMaxCalculation")
     public static int min(int first, int second) {
         return first < second ? first : second;
     }
 
+    // Calling a Math method would defeat the purpose of this endeavor
+    @SuppressWarnings("ManualMinMaxCalculation")
     public static int max(int first, int second) {
         return first < second ? second : first;
     }
 
     public static double pow(double base, int exponent) {
-        Long exp = (long) exponent; // min int causes a rollover when you multiply by -1
+        long exp = exponent; // min int causes a rollover when you multiply by -1
         if (exp < 0) {
             base = 1/base;
             exp *= -1;
