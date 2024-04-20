@@ -13,6 +13,8 @@ public interface MyList<E> {
 
     public boolean remove(Object o);
 
+    public E set(int index, E element);
+
     public int size();
 
 }

@@ -7,7 +7,14 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.personal.myMap.MyHashMap;
+import org.personal.myMap.MyMap;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 class MyArrayListTests {
 
@@ -59,7 +66,28 @@ class MyArrayListTests {
 
     @Test
     @Order(20)
-    void RemoveTest() {
-        assertEquals(0,0);
+    void PerformanceTest() {
+
+        List<String> list = new ArrayList<>();
+        Instant addListStart = Instant.now();
+        for (int i = 0; i < 1000000; ++i) {
+            list.add(String.valueOf(i));
+        }
+        Instant addListEnd = Instant.now();
+
+        MyList<String> myList = new MyArrayList<>();
+        Instant addMyListStart = Instant.now();
+        for (int i = 0; i < 1000000; ++i) {
+            myList.add(String.valueOf(i));
+        }
+        Instant addMyListEnd = Instant.now();
+
+        long addListDuration = addListEnd.toEpochMilli() - addListStart.toEpochMilli();
+        long addMyListDuration = addMyListEnd.toEpochMilli() - addMyListStart.toEpochMilli();
+        // expectation is that myList will be slower, but if it's not then that won't hurt the asserts
+        long tolerance = addMyListDuration - addListDuration;
+        // hoping for less than 100 milliseconds difference
+        assertTrue(tolerance < 100, "tolerance: " + tolerance);
+
     }
 }

@@ -43,7 +43,7 @@ class MyMathTests {
     }
 
     @Test
-    void PowVariableBaseTest() {
+    void PowVariableBasePositiveExponentTest() {
         // straight value comparisons start diverting around -200 and 200 due to rounding issues,
         // but the difference is negligible
         // 201^7 expected: <1.3254776280841402E16> but was: <1.32547762808414E16>
@@ -51,7 +51,7 @@ class MyMathTests {
         // actual is within expected tolerance between Integer.MIN_VALUE and Integer.MAX_VALUE,
         // but it takes over 13 minutes to run.
         // limits chosen are to keep the whole test execution time around 5 seconds
-        /*for (int i = -10000000; i < 10000000; ++i) {
+        for (int i = -10000000; i < 10000000; ++i) {
             int exponent = 7; // chosen arbitrarily
             double expected = Math.pow(i, exponent);
             double actual = MyMath.pow(i, exponent);
@@ -63,8 +63,14 @@ class MyMathTests {
                         "expected: " + expected + " actual: " + actual +
                                 " i: " + i + " accuracy: " + accuracy);
             }
-        }*/
+        }
+    }
 
+    @Test
+    void PowVariableBaseNegativeExponentTest() {
+        // actual is within expected tolerance between Integer.MIN_VALUE and Integer.MAX_VALUE,
+        // but it takes over 13 minutes to run.
+        // limits chosen are to keep the whole test execution time around 5 seconds
         for (int i = -100000000; i < 100000000; ++i) {
             int exponent = -7; // chosen arbitrarily
             double expected = Math.pow(i, exponent);

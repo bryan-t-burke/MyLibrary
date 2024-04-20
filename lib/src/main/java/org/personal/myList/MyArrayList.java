@@ -34,7 +34,7 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public void clear() {
-        // for now I'm making a trade off for space instead of time, so instead of spending time shrinking the array now and
+        // for now, I'm making a trade-off for space instead of time, so instead of spending time shrinking the array now and
         // possibly having to increase it again later, I'm just leaving the space that was previously allocated
         for (int i = 0; i < this.size; ++i) {
             this.contents[i] = null;
@@ -75,10 +75,20 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public boolean remove(Object o) {
-        // for now I'm making a trade off for space instead of time, so instead of spending time shrinking the array now and
+        // for now, I'm making a trade-off for space instead of time, so instead of spending time shrinking the array now and
         // possibly having to increase it again later, I'm just leaving the space that was previously allocated
         this.contents[--size] = null;
         return true;
+    }
+
+    @Override
+    //@SuppressWarnings("unchecked")
+    public E set(int index, E element) {
+        if (index > size - 1) {
+            throw new IndexOutOfBoundsException();
+        }
+        this.contents[index] = element;
+        return (E) this.contents[index];
     }
 
     @Override
@@ -87,11 +97,11 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     private boolean increaseSize() {
-        // 2x chosen arbitrarily. For now this implementation will use extra space as a trade off for compute time.
+        // 2x chosen arbitrarily. For now this implementation will use extra space as a trade-off for compute time.
         // So instead of increasing by small amounts and possibly having to do it a lot, we'll increase by large amounts
         // to reduce the number of times this method is called.
         try {
-            Object[] newContents = new Object[this.contents.length * 2]; 
+            Object[] newContents = new Object[this.contents.length * 2];
             for (int i = 0; i < this.contents.length; ++i) {
                 newContents[i] = this.contents[i];
             }
