@@ -1,27 +1,27 @@
 package org.personal.myMap;
 
 public interface MyMap<K, V> {
-    public void clear();
+    void clear();
 
-    public boolean containsKey(Object key);
+    boolean containsKey(Object key);
 
-    public boolean containsValue(Object value);
+    boolean containsValue(Object value);
 
-    public V get(Object key);
+    V get(Object key);
 
-    public default V getOrDefault(Object key, V defaultValue) {
+    default V getOrDefault(Object key, V defaultValue) {
         return defaultValue;
     }
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public V put(K key, V value);
+    V put(K key, V value);
 
-    public default V putIfAbsent(K key, V value) {
+    default V putIfAbsent(K key, V value) {
         return value;
     }
 
-    public boolean remove(Object o);
+    boolean remove(Object o);
 
-    public int size();
+    int size();
 }

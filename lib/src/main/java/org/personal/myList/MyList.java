@@ -1,20 +1,20 @@
 package org.personal.myList;
 
 public interface MyList<E> {
-    public boolean add(E e);
+    boolean add(E e);
 
-    public void clear();
+    void clear();
 
-    public boolean contains(Object o);
+    boolean contains(Object o);
 
-    public E get(int index);
+    E get(int index);
 
-    public boolean isEmpty();
+    boolean isEmpty();
 
-    public boolean remove(Object o);
+    boolean remove(Object o);
 
-    public E set(int index, E element);
+    E set(int index, E element);
 
-    public int size();
+    int size();
 
 }

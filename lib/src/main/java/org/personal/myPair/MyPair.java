@@ -1,5 +1,6 @@
 package org.personal.myPair;
 
+// technically not a core java class, but it's very handy to have
 public class MyPair<K, V> {
 
     // not sure if I want these final or modifiable yet.
