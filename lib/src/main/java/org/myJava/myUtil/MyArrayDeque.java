@@ -1,4 +1,4 @@
-package org.personal.myDeque;
+package org.myJava.myUtil;
 
 import java.util.NoSuchElementException;
 

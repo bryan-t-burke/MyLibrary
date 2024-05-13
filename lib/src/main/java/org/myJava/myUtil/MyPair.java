@@ -1,4 +1,4 @@
-package org.personal.myPair;
+package org.myJava.myUtil;
 
 // technically not a core java class, but it's very handy to have
 public class MyPair<K, V> {

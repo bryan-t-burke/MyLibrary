@@ -1,8 +1,4 @@
-package org.personal.myMap;
-
-import org.personal.myList.MyArrayList;
-import org.personal.myList.MyList;
-import org.personal.myPair.MyPair;
+package org.myJava.myUtil;
 
 public class MyHashMap<K, V> implements MyMap<K, V> {
 

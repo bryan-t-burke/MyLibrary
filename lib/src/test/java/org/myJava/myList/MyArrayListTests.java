@@ -1,4 +1,4 @@
-package org.personal.myList;
+package org.myJava.myList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -7,14 +7,12 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.personal.myMap.MyHashMap;
-import org.personal.myMap.MyMap;
+import org.myJava.myUtil.MyArrayList;
+import org.myJava.myUtil.MyList;
 
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 class MyArrayListTests {
 

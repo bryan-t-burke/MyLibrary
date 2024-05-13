@@ -1,4 +1,4 @@
-package org.personal.myMap;
+package org.myJava.myUtil;
 
 public interface MyMap<K, V> {
     void clear();

@@ -1,4 +1,4 @@
-package org.personal.myQueue;
+package org.myJava.myUtil;
 
 public interface MyQueue<E> {
     boolean add(E e);

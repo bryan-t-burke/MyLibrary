@@ -1,4 +1,4 @@
-package org.personal.myList;
+package org.myJava.myUtil;
 
 public interface MyList<E> {
     boolean add(E e);

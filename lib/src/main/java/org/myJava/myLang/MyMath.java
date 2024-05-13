@@ -1,4 +1,4 @@
-package org.personal.myMath;
+package org.myJava.myLang;
 
 public class MyMath {
 

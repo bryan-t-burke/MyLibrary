@@ -1,6 +1,4 @@
-package org.personal.myDeque;
-
-import org.personal.myQueue.MyQueue;
+package org.myJava.myUtil;
 
 public interface MyDeque<E> extends MyQueue<E> {
     boolean add(E e);

@@ -1,4 +1,4 @@
-package org.personal.myMap;
+package org.myJava.myMap;
 
 import java.time.Instant;
 import java.util.HashMap;
@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.myJava.myUtil.MyHashMap;
+import org.myJava.myUtil.MyMap;
 
 public class MyHashMapTests {
 

@@ -1,4 +1,4 @@
-package org.personal.myList;
+package org.myJava.myUtil;
 
 public class MyArrayList<E> implements MyList<E> {
 

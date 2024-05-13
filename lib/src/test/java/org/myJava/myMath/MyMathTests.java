@@ -1,4 +1,4 @@
-package org.personal.myMath;
+package org.myJava.myMath;
 
 import java.lang.Math;
 
@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.myJava.myLang.MyMath;
 
 class MyMathTests {
     @Test

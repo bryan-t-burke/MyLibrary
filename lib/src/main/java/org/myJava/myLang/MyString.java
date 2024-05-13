@@ -1,6 +1,4 @@
-package org.personal.myString;
-
-import org.personal.myMath.MyMath;
+package org.myJava.myLang;
 
 public class MyString {
     private char[] contents;
